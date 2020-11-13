@@ -9,16 +9,13 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fpy_template'
+gem 'fpy_template', git: 'https://github.com/sheikhhamza012/rankmi_fpy_template.git'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install fpy_template
 
 ## Usage
 
