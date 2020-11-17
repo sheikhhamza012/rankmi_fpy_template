@@ -19,7 +19,7 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+- `FpyTemplate::Parse.transform('Prueba FPY.xlsx')`
 
 ## Development
 

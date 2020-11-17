@@ -149,8 +149,8 @@ module FpyTemplate
 
             to_arr.each do |val|
                 indices_of_rows_with_this_position = indices_of_rows_with_value_in_col(file,"position", val)
-                i=1
                 file.each do |row|
+                    i=1
                     update_i=false
                     if asendentees_arr.include?(row[position_index]&.value&.downcase)
                         indices_of_rows_with_this_position.each do |val|
@@ -169,7 +169,9 @@ module FpyTemplate
                                 file.add_cell(val,ascendente_index,row[identifier_index]&.value)
                             end
                         end
-                        i+=1 if update_i
+                        if update_i
+                            i+=1 
+                        end
                     end
                 end
             end
@@ -188,16 +190,16 @@ module FpyTemplate
             file.each_with_index do |row, i |
                 next if i==0
                 arr_of_ponderations_to_fill = []
-                if !row[ascendente_index]&.value.to_s.empty?
+                if ascendente_index && !row[ascendente_index]&.value.to_s.empty?
                     arr_of_ponderations_to_fill << ponderation_ascendente_index
                 end
-                if !row[gerente_index]&.value.to_s.empty?
+                if gerente_index && !row[gerente_index]&.value.to_s.empty?
                     arr_of_ponderations_to_fill << ponderation_gerenete_index
                 end
-                if !row[descendente_index]&.value.to_s.empty?
+                if descendente_index && !row[descendente_index]&.value.to_s.empty?
                     arr_of_ponderations_to_fill << ponderation_descendente_index
                 end
-                if !row[equipo_index]&.value.to_s.empty?
+                if equipo_index && !row[equipo_index]&.value.to_s.empty?
                     arr_of_ponderations_to_fill << ponderation_equipo_index
                 end
                 total = 0 
