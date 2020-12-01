@@ -33,7 +33,7 @@ module FpyTemplate
 
       set_ponderation_values(output[0])
       output.write('output.xlsx')
-
+      return output
     # rescue Exception => e
 
     #   byebug
