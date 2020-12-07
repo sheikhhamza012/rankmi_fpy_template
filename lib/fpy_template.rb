@@ -32,7 +32,8 @@ module FpyTemplate
       add_asendentees(output[0],["Profesional de obra","Ayudante profesional","Administrativo","Jefe de bodega","Bodeguero","Prevencionista","Jefe de obra","Jefe administrativo"],["Profesional de obra","Ayudante profesional","Administrativo","Jefe de bodega","Bodeguero","Prevencionista","Jefe de obra","Jefe administrativo"],"equipo")
 
       set_ponderation_values(output[0])
-      output.write('output.xlsx')
+      return workbook.stream.read
+      # output.write('output.xlsx')
     # rescue Exception => e
 
     #   byebug
